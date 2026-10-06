@@ -1,0 +1,57 @@
+{
+  "name": "@juancastingo/safe-config",
+  "version": "0.1.0",
+  "description": "Safe, type-first multi-format config loader (.env, JSON, YAML, TOML) with schema validation, env overrides, and automatic secret redaction",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "config",
+    "configuration",
+    "env",
+    "secrets",
+    "yaml",
+    "toml",
+    "json",
+    "schema-validation",
+    "typescript"
+  ],
+  "author": "Juan Castin <juancastingo@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juancastingo/safe-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juancastingo/safe-config/issues"
+  },
+  "homepage": "https://github.com/juancastingo/safe-config#readme",
+  "dependencies": {
+    "yaml": "^2.4.5",
+    "smol-toml": "^1.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "^8.1.0",
+    "tsx": "^4.15.0",
+    "typescript": "^5.4.5"
+  }
+}
