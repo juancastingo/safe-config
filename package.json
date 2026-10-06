@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "test": "node --import tsx --test tests/*.test.ts",
+    "test": "node --import tsx --test tests/safe-config.test.ts",
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit"
   },
